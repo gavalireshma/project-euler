@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int prev = 0;
+    int cur = 1;
+    int anssum = 0;
+
+    while (cur <= 4000000) {
+        if (cur % 2 == 0) {
+            anssum += cur;
+        }
+        
+        int temp = prev;
+        prev = cur;
+        cur = prev + temp;
+    }
+
+    cout << anssum << endl;
+    return 0;
+}
